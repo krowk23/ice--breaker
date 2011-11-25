@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>9.0.21022</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{FA328BBD-B798-4854-C54F-D8119A2987F2}</ProjectGuid>
+	<ProjectGuid>{CE5771AD-E419-AE15-9C29-EA389E0625CE}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -60,13 +60,15 @@
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TurnOffBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\VirtualButtonBehaviour.cs" />
      <Compile Include="Assets\Scripts\CameraDeviceMenu.cs" />
+     <Compile Include="Assets\Scripts\DrawIce.cs" />
+     <Compile Include="Assets\Scripts\IceCreater.cs" />
      <Compile Include="Assets\Scripts\InitializationErrorHandler.cs" />
      <Compile Include="Assets\Scripts\TrackableEventHandler.cs" />
      <Compile Include="Assets\Scripts\TrackerEventHandler.cs" />
+     <Compile Include="Assets\Scripts\glass.cs" />
      <None Include="Assets\StreamingAssets\QCAR\config.xml" />
-     <None Include="Assets\license.txt" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
-     <None Include="Assets\License_Readme.txt" />
+     <None Include="Assets\IceMap\map00.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>9.0.21022</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{83D9C962-418F-94E6-265E-F25921559FD7}</ProjectGuid>
+	<ProjectGuid>{1D24975C-2810-AF9F-3B2E-BAF179B8F7D7}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -44,13 +44,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\demo\CreateIce.js" />
      <Compile Include="Assets\demo\GlassWater.js" />
      <Compile Include="Assets\demo\exit.js" />
      <None Include="Assets\StreamingAssets\QCAR\config.xml" />
      <None Include="Assets\license.txt" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
      <None Include="Assets\License_Readme.txt" />
+     <None Include="Assets\IceMap\map00.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,7 +6,9 @@ using System.IO;
 public class IceCreater : MonoBehaviour {
 	
 	public GameObject iceBig;
-	public GameObject iceMid;
+	public GameObject iceMidx;
+	public GameObject iceMidy;
+	public GameObject iceMidz;
 	public GameObject iceSmall;
 	
 	public int totalFiles;
@@ -54,17 +56,27 @@ public class IceCreater : MonoBehaviour {
 						break;
 					case '1':
 					{
-						GameObject ice = Instantiate (iceSmall, transform.TransformDirection(new Vector3(-125+j*50,25+k*50,-125+i*50)) , Quaternion.identity) as GameObject;
+						GameObject ice = Instantiate (iceSmall, transform.TransformDirection(new Vector3(-125+j*50,25+i*50,-125+k*50)) , Quaternion.identity) as GameObject;
 						break;
 					}
 					case '2':
 					{
-						GameObject ice = Instantiate (iceMid, transform.TransformDirection(new Vector3(-125+j*50,25+k*50,-125+i*50)) , Quaternion.identity) as GameObject;
+						GameObject ice = Instantiate (iceMidx, transform.TransformDirection(new Vector3(-125+j*50,50+i*50,-100+k*50)) , Quaternion.identity) as GameObject;
 						break;
 					}
 					case '3':
 					{
-						GameObject ice = Instantiate (iceBig, transform.TransformDirection(new Vector3(-125+j*50,25+k*50,-125+i*50)) , Quaternion.identity) as GameObject;
+						GameObject ice = Instantiate (iceMidy, transform.TransformDirection(new Vector3(-100+j*50,25+i*50,-100+k*50)) , Quaternion.identity) as GameObject;
+						break;
+					}
+					case '4':
+					{
+						GameObject ice = Instantiate (iceMidz, transform.TransformDirection(new Vector3(-100+j*50,50+i*50,-125+k*50)) , Quaternion.identity) as GameObject;
+						break;
+					}	
+					case '5':
+					{
+						GameObject ice = Instantiate (iceBig, transform.TransformDirection(new Vector3(-100+j*50,50+i*50,-100+k*50)) , Quaternion.identity) as GameObject;
 						break;
 					}
 					default:

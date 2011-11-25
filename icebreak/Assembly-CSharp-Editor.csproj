@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>9.0.21022</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{3508856D-AD6A-2DC3-2C4B-EE9E4993171E}</ProjectGuid>
+	<ProjectGuid>{B885DB37-126E-2743-4F9D-8F4625E586AF}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -64,19 +64,14 @@
      <Compile Include="Assets\Editor\QCAR\Scripts\TrackerEditor.cs" />
      <Compile Include="Assets\Editor\QCAR\Scripts\VirtualButtonEditor.cs" />
      <None Include="Assets\StreamingAssets\QCAR\config.xml" />
-     <None Include="Assets\license.txt" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
-     <None Include="Assets\License_Readme.txt" />
+     <None Include="Assets\IceMap\map00.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{FA328BBD-B798-4854-C54F-D8119A2987F2}</Project>
+      <Project>{CE5771AD-E419-AE15-9C29-EA389E0625CE}</Project>
       <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Assembly-UnityScript.unityproj">
-      <Project>{83D9C962-418F-94E6-265E-F25921559FD7}</Project>
-      <Name>Assembly-UnityScript</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
