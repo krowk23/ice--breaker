@@ -13,7 +13,8 @@ public class IceCreater : MonoBehaviour {
 	
 	public int totalFiles;
 	
-	public StreamReader mapReader;
+	public TextReader mapReader;
+	//public StreamReader mapReader;
 	
 	void Start ()
 	{
@@ -27,9 +28,14 @@ public class IceCreater : MonoBehaviour {
 	
 	void LoadIce(int n)
 	{
-		if(n>=totalFiles) throw new FileNotFoundException("There's no map" + String.Format("{0:00}", n) + ".txt");
 		
+		TextAsset map = (TextAsset)Resources.Load("IceMap/map" + String.Format("{0:00}", n));
+		mapReader = new StringReader(map.text);
+
+		/*
+		if(n>=totalFiles) throw new FileNotFoundException("There's no map" + String.Format("{0:00}", n) + ".txt");
 		mapReader = new FileInfo(Application.dataPath + "/IceMap/map" + String.Format("{0:00}", n) + ".txt").OpenText();
+		*/
 		
 		int width = System.Convert.ToInt32(mapReader.ReadLine());
 		int height = System.Convert.ToInt32(mapReader.ReadLine());

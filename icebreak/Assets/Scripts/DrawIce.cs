@@ -15,31 +15,47 @@ public class DrawIce : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {	
-		if(Input.GetMouseButton(0)){
-			Ray ray=ARcamera.camera.ScreenPointToRay(Input.mousePosition);
-			RaycastHit hit = new RaycastHit();
-			if(Physics.Raycast(ray, out hit) && !isHitIce){
-														touchDir=-ray.direction;
-														ice=hit.transform.gameObject;
-														isHitIce=true;
-		}}
-		if(Input.GetMouseButtonUp(0)){			
-			isHitIce=false;
+	void Update () {
+		if(Input.multiTouchEnabled){
+			if(Input.touches[0].phase==TouchPhase.Began){
+				touchPos.x=Input.touches[0].position.x;	
+				touchPos.y=Input.touches[0].position.y;
+				Ray ray=ARcamera.camera.ScreenPointToRay(touchPos);
+				RaycastHit hit = new RaycastHit();
+				if(Physics.Raycast(ray, out hit) && !isHitIce){
+															touchDir=-ray.direction;
+															ice=hit.transform.gameObject;
+															isHitIce=true;
+			}}
+			if(Input.touches[0].phase==TouchPhase.Ended){			
+				isHitIce=false;
 		}
+		}else{
+			if(Input.GetMouseButton(0)){
+				touchPos=Input.mousePosition;
+				Ray ray=ARcamera.camera.ScreenPointToRay(touchPos);
+				RaycastHit hit = new RaycastHit();
+				if(Physics.Raycast(ray, out hit) && !isHitIce){
+															touchDir=-ray.direction;
+															ice=hit.transform.gameObject;
+															isHitIce=true;
+			}}
+			if(Input.GetMouseButtonUp(0)){			
+				isHitIce=false;
+		}}
 		if(isHitIce)MoveIce();
 	}
 	
 	private void MoveIce(){
 		Vector3 iceScreenPos=ARcamera.camera.WorldToScreenPoint(ice.transform.position);
 		Vector3 destination=Vector3.zero;
+		print(iceScreenPos);
+		if(iceScreenPos.z >= 300)destination.z=1;
 		
-		if(iceScreenPos.z >= 300)destination.z=2;
-		
-		if(iceScreenPos.x > Input.mousePosition.x)destination.x=-1;
+		if(iceScreenPos.x > touchPos.x)destination.x=-1;
 		else destination.x=1;
 		
-		if(iceScreenPos.y > Input.mousePosition.y)destination.y=1;
+		if(iceScreenPos.y > touchPos.y)destination.y=1;
 		else destination.y=-1;
 		
 		ice.rigidbody.velocity=ARcamera.transform.InverseTransformDirection(destination)*5;
