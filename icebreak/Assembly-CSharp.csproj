@@ -60,15 +60,19 @@
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TurnOffBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\VirtualButtonBehaviour.cs" />
      <Compile Include="Assets\Scripts\CameraDeviceMenu.cs" />
+     <Compile Include="Assets\Scripts\DataBasic.cs" />
      <Compile Include="Assets\Scripts\DrawIce.cs" />
+     <Compile Include="Assets\Scripts\Glass.cs" />
      <Compile Include="Assets\Scripts\IceCreater.cs" />
+     <Compile Include="Assets\Scripts\IceInGlass.cs" />
      <Compile Include="Assets\Scripts\InitializationErrorHandler.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\TrackableEventHandler.cs" />
      <Compile Include="Assets\Scripts\TrackerEventHandler.cs" />
-     <Compile Include="Assets\Scripts\glass.cs" />
+     <Compile Include="Assets\Scripts\Water.cs" />
      <None Include="Assets\StreamingAssets\QCAR\config.xml" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
-     <None Include="Assets\IceMap\map00.txt" />
+     <None Include="Assets\Resources\IceMap\map00.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

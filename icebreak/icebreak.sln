@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+
+Project("{263B1C3A-9CD6-7DC8-B981-BB87058573C3}") = "icebreak", "Assembly-CSharp.csproj", "{CE5771AD-E419-AE15-9C29-EA389E0625CE}"
+EndProject
+Project("{263B1C3A-9CD6-7DC8-B981-BB87058573C3}") = "icebreak", "Assembly-CSharp-Editor.csproj", "{B885DB37-126E-2743-4F9D-8F4625E586AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE5771AD-E419-AE15-9C29-EA389E0625CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5771AD-E419-AE15-9C29-EA389E0625CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE5771AD-E419-AE15-9C29-EA389E0625CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE5771AD-E419-AE15-9C29-EA389E0625CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B885DB37-126E-2743-4F9D-8F4625E586AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B885DB37-126E-2743-4F9D-8F4625E586AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B885DB37-126E-2743-4F9D-8F4625E586AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B885DB37-126E-2743-4F9D-8F4625E586AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	
+EndGlobal

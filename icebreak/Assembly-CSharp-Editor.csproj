@@ -65,7 +65,7 @@
      <Compile Include="Assets\Editor\QCAR\Scripts\VirtualButtonEditor.cs" />
      <None Include="Assets\StreamingAssets\QCAR\config.xml" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
-     <None Include="Assets\IceMap\map00.txt" />
+     <None Include="Assets\Resources\IceMap\map00.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
