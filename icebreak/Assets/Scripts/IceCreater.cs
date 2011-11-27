@@ -11,6 +11,8 @@ public class IceCreater : MonoBehaviour {
 	public GameObject iceMidz;
 	public GameObject iceSmall;
 	
+	public IceTower head =new IceTower();//record the ice tower in a link list
+	
 	public int totalFiles;
 	
 	public TextReader mapReader;
@@ -31,17 +33,13 @@ public class IceCreater : MonoBehaviour {
 		
 		TextAsset map = (TextAsset)Resources.Load("IceMap/map" + String.Format("{0:00}", n));
 		mapReader = new StringReader(map.text);
-
-		/*
-		if(n>=totalFiles) throw new FileNotFoundException("There's no map" + String.Format("{0:00}", n) + ".txt");
-		mapReader = new FileInfo(Application.dataPath + "/IceMap/map" + String.Format("{0:00}", n) + ".txt").OpenText();
-		*/
 		
 		int width = System.Convert.ToInt32(mapReader.ReadLine());
 		int height = System.Convert.ToInt32(mapReader.ReadLine());
 		
 		print(width + "  " + height);
 		String temp;
+		IceTower tempIce=head;
 		
 		for(int i=0; i<height; i++)
 		{
@@ -54,6 +52,9 @@ public class IceCreater : MonoBehaviour {
 				{
 					tempEnum.MoveNext();
 					
+					tempIce.next=new IceTower();
+					tempIce=tempIce.next;
+					
 					if(tempEnum == null) throw new FileLoadException("tempEnum is NULL.");
 					print(j + " " + tempEnum.Current);
 					switch((char)tempEnum.Current)
@@ -63,26 +64,31 @@ public class IceCreater : MonoBehaviour {
 					case '1':
 					{
 						GameObject ice = Instantiate (iceSmall, transform.TransformDirection(new Vector3(-125+j*50,25+i*50,-125+k*50)) , Quaternion.identity) as GameObject;
+						tempIce.ice = ice.GetComponent<Ice>();
 						break;
 					}
 					case '2':
 					{
 						GameObject ice = Instantiate (iceMidx, transform.TransformDirection(new Vector3(-125+j*50,50+i*50,-100+k*50)) , Quaternion.identity) as GameObject;
+						tempIce.ice = ice.GetComponent<Ice>();
 						break;
 					}
 					case '3':
 					{
 						GameObject ice = Instantiate (iceMidy, transform.TransformDirection(new Vector3(-100+j*50,25+i*50,-100+k*50)) , Quaternion.identity) as GameObject;
+						tempIce.ice = ice.GetComponent<Ice>();
 						break;
 					}
 					case '4':
 					{
 						GameObject ice = Instantiate (iceMidz, transform.TransformDirection(new Vector3(-100+j*50,50+i*50,-125+k*50)) , Quaternion.identity) as GameObject;
+						tempIce.ice = ice.GetComponent<Ice>();
 						break;
 					}	
 					case '5':
 					{
 						GameObject ice = Instantiate (iceBig, transform.TransformDirection(new Vector3(-100+j*50,50+i*50,-100+k*50)) , Quaternion.identity) as GameObject;
+						tempIce.ice = ice.GetComponent<Ice>();
 						break;
 					}
 					default:
