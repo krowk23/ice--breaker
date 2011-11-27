@@ -61,7 +61,6 @@
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\VirtualButtonBehaviour.cs" />
      <Compile Include="Assets\Scripts\DataAction.cs" />
      <Compile Include="Assets\Scripts\DrawIce.cs" />
-     <Compile Include="Assets\Scripts\Glass.cs" />
      <Compile Include="Assets\Scripts\Ice.cs" />
      <Compile Include="Assets\Scripts\IceCreater.cs" />
      <Compile Include="Assets\Scripts\IceTower.cs" />
@@ -70,6 +69,8 @@
      <Compile Include="Assets\Scripts\Qcar\InitializationErrorHandler.cs" />
      <Compile Include="Assets\Scripts\Qcar\TrackableEventHandler.cs" />
      <Compile Include="Assets\Scripts\Qcar\TrackerEventHandler.cs" />
+     <Compile Include="Assets\Scripts\control.cs" />
+     <Compile Include="Assets\Scripts\glass.cs" />
      <None Include="Assets\StreamingAssets\QCAR\config.xml" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
      <None Include="Assets\Resources\IceMap\map00.txt" />
