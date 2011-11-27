@@ -22,7 +22,7 @@ public class DrawIce : MonoBehaviour {
 				touchPos=new Vector3(Input.touches[0].position.x,Input.touches[0].position.y,0);
 				Ray ray=ARcamera.camera.ScreenPointToRay(touchPos);
 				RaycastHit hit = new RaycastHit();
-				if(Physics.Raycast(ray, out hit) && !isHitIce){
+				if(Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag=="Ice" && !isHitIce){
 															touchDir=-ray.direction;
 															iceHitted=hit.transform.gameObject;
 															data.SetCurrentIce(iceHitted);
@@ -37,7 +37,7 @@ public class DrawIce : MonoBehaviour {
 				touchPos=Input.mousePosition;
 				Ray ray=ARcamera.camera.ScreenPointToRay(touchPos);
 				RaycastHit hit = new RaycastHit();
-				if(Physics.Raycast(ray, out hit) && !isHitIce){
+				if(Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag=="Ice" && !isHitIce){
 															touchDir=-ray.direction;
 															iceHitted=hit.transform.gameObject;
 															data.SetCurrentIce(iceHitted);

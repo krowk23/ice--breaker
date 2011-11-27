@@ -1,13 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DrawIce.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\IceMap\map00.txt">
     <Files>
-      <File FileName="Assets\Scripts\DrawIce.cs" Line="21" Column="59" />
-      <File FileName="Assets\Scripts\Player.cs" Line="6" Column="9" />
+      <File FileName="Assets\Scripts\DataAction.cs" Line="34" Column="2" />
+      <File FileName="Assets\Scripts\Player.cs" Line="16" Column="27" />
       <File FileName="Assets\Scripts\IceCreater.cs" Line="91" Column="7" />
-      <File FileName="Assets\Scripts\Ice.cs" Line="11" Column="9" />
+      <File FileName="Assets\Scripts\Ice.cs" Line="49" Column="5" />
       <File FileName="Assets\Scripts\IceTower.cs" Line="5" Column="23" />
-      <File FileName="Assets\Scripts\DataBase.cs" Line="15" Column="2" />
+      <File FileName="Assets\Scripts\DrawIce.cs" Line="40" Column="77" />
+      <File FileName="Assets\Resources\IceMap\map00.txt" Line="28" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
